@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-    <Flex bg="white" p="3" borderBottom="1px solid #ddd">
+    <Flex bg="white" p="3" borderBottom="1px solid #ddd" h="65px">
       <Box p="2">
         <Heading size="md">plathome</Heading>
       </Box>
