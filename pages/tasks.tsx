@@ -1,9 +1,9 @@
-import { Heading } from '@chakra-ui/layout'
+import { Container, Heading } from '@chakra-ui/layout'
 
 export default function Tasks() {
   return (
-    <div>
-      <Heading>タスクページ</Heading>
-    </div>
+    <Container>
+      <Heading mt={4}>タスクページ</Heading>
+    </Container>
   )
 }

@@ -1,9 +1,9 @@
-import { Heading } from '@chakra-ui/layout'
+import { Container, Heading } from '@chakra-ui/layout'
 
 export default function Notes() {
   return (
-    <div>
-      <Heading>ノートページ</Heading>
-    </div>
+    <Container>
+      <Heading mt={4}>ノートページ</Heading>
+    </Container>
   )
 }
