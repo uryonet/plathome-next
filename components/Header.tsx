@@ -1,5 +1,5 @@
-import React from 'react'
-import DrawerMenu from './DrawerMenu'
+import React, { useEffect } from 'react'
+import SideDrawer from './SideDrawer'
 import { useDisclosure } from '@chakra-ui/hooks'
 import { Flex, Box, Heading, Spacer } from '@chakra-ui/layout'
 import { IconButton } from '@chakra-ui/button'
@@ -17,13 +17,12 @@ const Header: React.FC = () => {
       <Box>
         <IconButton
           onClick={onOpen}
-          variant="outline"
           colorScheme="teal"
           aria-label="sidebar menu"
           icon={<HamburgerIcon />}
         />
       </Box>
-      <DrawerMenu isOpen={isOpen} onClose={onClose} />
+      <SideDrawer isOpen={isOpen} onClose={onClose} />
     </Flex>
   )
 }
