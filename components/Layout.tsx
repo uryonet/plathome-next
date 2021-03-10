@@ -11,7 +11,7 @@ const Layout: React.FC = ({ children }) => {
   }
 
   return (
-    <div className="container">
+    <div className="flex flex-col h-screen">
       <Head>
         <title>plathome</title>
         <link rel="icon" href="/favicon.ico" />
@@ -22,7 +22,7 @@ const Layout: React.FC = ({ children }) => {
         interactionType={InteractionType.Redirect}
         authenticationRequest={authRequest}
       >
-        <div>{children}</div>
+        <div className="container h-full">{children}</div>
       </MsalAuthenticationTemplate>
     </div>
   )

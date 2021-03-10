@@ -6,7 +6,7 @@ import { MsalProvider } from '@azure/msal-react'
 import { Configuration, PublicClientApplication } from '@azure/msal-browser'
 
 import Layout from '../components/Layout'
-import 'tailwindcss/tailwind.css'
+import '../style/global.css'
 
 const configuration: Configuration = {
   auth: {
