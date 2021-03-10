@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import Header from './Header'
-import { Box } from '@chakra-ui/layout'
 
 import { MsalAuthenticationTemplate } from '@azure/msal-react'
 import { InteractionType } from '@azure/msal-browser'
@@ -12,7 +11,7 @@ const Layout: React.FC = ({ children }) => {
   }
 
   return (
-    <Box h="100vh">
+    <div className="container">
       <Head>
         <title>plathome</title>
         <link rel="icon" href="/favicon.ico" />
@@ -25,7 +24,7 @@ const Layout: React.FC = ({ children }) => {
       >
         <div>{children}</div>
       </MsalAuthenticationTemplate>
-    </Box>
+    </div>
   )
 }
 
