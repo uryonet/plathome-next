@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button } from '@chakra-ui/button'
 
 type Props = {
   to: string
@@ -10,9 +9,7 @@ type Props = {
 const DrawerMenuItem: React.FC<Props> = ({ children, to, onClick }) => {
   return (
     <Link href={to}>
-      <Button isFullWidth variant="outline" onClick={onClick}>
-        {children}
-      </Button>
+      <button onClick={onClick}>{children}</button>
     </Link>
   )
 }
