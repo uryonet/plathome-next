@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import DrawerMenuItem from './DrawerMenuItem'
+import DrawerMenuItem from './DrawerMenu'
 
 type Props = {
   isOpen: boolean

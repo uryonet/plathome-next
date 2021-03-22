@@ -1,11 +1,9 @@
+import { Configuration, PublicClientApplication } from '@azure/msal-browser'
+import { MsalProvider } from '@azure/msal-react'
 import { AppProps } from 'next/app'
 import { Provider } from 'react-redux'
-import store from '../store/store'
-
-import { MsalProvider } from '@azure/msal-react'
-import { Configuration, PublicClientApplication } from '@azure/msal-browser'
-
 import Layout from '../components/Layout'
+import store from '../store/store'
 import '../style/global.css'
 
 const configuration: Configuration = {
