@@ -1,9 +1,11 @@
-import { Container, Heading } from '@chakra-ui/layout'
+import React from 'react'
 
-export default function Notes() {
+const Notes: React.FC = () => {
   return (
-    <Container>
-      <Heading mt={4}>ノートページ</Heading>
-    </Container>
+    <div className="container">
+      <h1>ノートページ</h1>
+    </div>
   )
 }
+
+export default Notes

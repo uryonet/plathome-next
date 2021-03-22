@@ -1,12 +1,11 @@
-import { Container, Heading } from '@chakra-ui/layout'
-import { useAccount, useMsal } from '@azure/msal-react'
+import React from 'react'
 
-export default function Tasks() {
-  const {instance, accounts, inProgress} = useMsal()
-  const account = useAccount(accounts[0] || {})
+const Tasks: React.FC = () => {
   return (
-    <Container>
-      <Heading mt={4}>タスクページ</Heading>
-    </Container>
+    <div className="container">
+      <h1>タスクページ</h1>
+    </div>
   )
 }
+
+export default Tasks
