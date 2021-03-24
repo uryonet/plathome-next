@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
+import DrawerMenu from './DrawerMenu'
 
 const Header: React.FC = () => {
+  const [isHidden, setIsHidden] = useState(true)
+
+  const onClickMenu = () => {
+    setIsHidden(!isHidden)
+  }
+
   return (
-    <nav className="flex fixed w-full items-center justify-between px-2 h-16 border-b border-gray-200">
-      <h1>plathome</h1>
-      <button className="button is-primary">menu</button>
+    <nav className="is-flex p-3 header">
+      <h1 className="is-size-4">plathome</h1>
+      <button className="button is-primary ml-auto" onClick={onClickMenu}>
+        <span className="icon">
+          <i className="fas fa-bars"></i>
+        </span>
+      </button>
+      <DrawerMenu isHidden={isHidden} onClick={onClickMenu}/>
     </nav>
   )
 }
