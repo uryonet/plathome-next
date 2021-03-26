@@ -11,7 +11,7 @@ const Layout: React.FC = ({ children }) => {
         <meta httpEquiv="content-language" content="ja" />
       </Head>
       <Header />
-      <div className="p-3">{children}</div>
+      <div>{children}</div>
     </div>
   )
 }

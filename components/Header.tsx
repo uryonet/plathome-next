@@ -9,14 +9,10 @@ const Header: React.FC = () => {
   }
 
   return (
-    <nav className="is-flex p-3 header">
-      <h1 className="is-size-4">plathome</h1>
-      <button className="button is-primary ml-auto" onClick={onClickMenu}>
-        <span className="icon">
-          <i className="fas fa-bars"></i>
-        </span>
-      </button>
-      <DrawerMenu isHidden={isHidden} onClick={onClickMenu}/>
+    <nav>
+      <h1>plathome</h1>
+      <button onClick={onClickMenu}>Drawer Menu</button>
+      <DrawerMenu isHidden={isHidden} onClick={onClickMenu} />
     </nav>
   )
 }

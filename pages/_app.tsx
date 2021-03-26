@@ -4,7 +4,7 @@ import { AppProps } from 'next/app'
 import { Provider } from 'react-redux'
 import Layout from '../components/Layout'
 import store from '../store/store'
-import '../style/global.sass'
+import '../style/global.css'
 
 const configuration: Configuration = {
   auth: {
