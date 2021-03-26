@@ -31,6 +31,10 @@ const DrawerMenu: React.FC<Props> = ({ children, isHidden, onClick }) => {
           </button>
         </Link>
       </div>
+      <div className="login-logout p-3">
+        <button className="button is-fullwidth is-light is-info">ログイン</button>
+        <button className="button is-fullwidth is-light is-danger">ログアウト</button>
+      </div>
     </aside>
   )
 }
