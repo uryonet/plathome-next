@@ -5,6 +5,13 @@ import { Provider } from 'react-redux'
 import Layout from '../components/Layout'
 import store from '../store/store'
 import '../style/global.css'
+import { createMuiTheme, CssBaseline, ThemeProvider } from '@material-ui/core'
+
+const materialTheme = createMuiTheme({
+  palette: {
+    type: 'dark'
+  }
+})
 
 const configuration: Configuration = {
   auth: {
@@ -15,13 +22,16 @@ const pca = new PublicClientApplication(configuration)
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
-    <MsalProvider instance={pca}>
-      <Provider store={store}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </Provider>
-    </MsalProvider>
+    <ThemeProvider theme={materialTheme}>
+      <MsalProvider instance={pca}>
+        <Provider store={store}>
+          <CssBaseline />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </Provider>
+      </MsalProvider>
+    </ThemeProvider>
   )
 }
 

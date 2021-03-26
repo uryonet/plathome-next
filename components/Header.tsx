@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import DrawerMenu from './DrawerMenu'
 
+import { Button } from '@material-ui/core'
+
 const Header: React.FC = () => {
   const [isHidden, setIsHidden] = useState(true)
 
@@ -11,7 +13,7 @@ const Header: React.FC = () => {
   return (
     <nav>
       <h1>plathome</h1>
-      <button onClick={onClickMenu}>Drawer Menu</button>
+      <Button variant="contained" color="primary" onClick={onClickMenu}>Drawer Menu</Button>
       <DrawerMenu isHidden={isHidden} onClick={onClickMenu} />
     </nav>
   )
