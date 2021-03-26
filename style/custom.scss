@@ -1,0 +1,25 @@
+.header {
+  border-bottom: 1px solid lightgray;
+}
+
+.drawer {
+  position: fixed;
+  z-index: 1000;
+  height: 100vh;
+  width: 20rem;
+  top: 0;
+  right: 0;
+  background-color: lightgray;
+
+  .drawer-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .login-logout {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+}

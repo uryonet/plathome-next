@@ -4,14 +4,14 @@ import Header from './Header'
 
 const Layout: React.FC = ({ children }) => {
   return (
-    <div className="flex flex-col h-screen">
+    <div>
       <Head>
         <title>plathome</title>
         <link rel="icon" href="/favicon.ico" />
         <meta httpEquiv="content-language" content="ja" />
       </Head>
       <Header />
-      <div className="container h-full">{children}</div>
+      <div className="p-3">{children}</div>
     </div>
   )
 }
