@@ -1,10 +1,25 @@
 import { Configuration, PublicClientApplication } from '@azure/msal-browser'
 import { MsalProvider } from '@azure/msal-react'
 import { AppProps } from 'next/app'
+import { useEffect } from 'react'
 import { Provider } from 'react-redux'
 import Layout from '../components/Layout'
 import store from '../store/store'
-import '../style/global.sass'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import { blue, pink } from '@material-ui/core/colors'
+import CssBaseline from '@material-ui/core/CssBaseline'
+
+const materialTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: blue[200]
+    },
+    secondary: {
+      main: pink[200]
+    },
+    type: 'dark'
+  }
+})
 
 const configuration: Configuration = {
   auth: {
@@ -14,14 +29,24 @@ const configuration: Configuration = {
 const pca = new PublicClientApplication(configuration)
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+  useEffect(() => {
+    const jssStyles = document.querySelector('#jss-server-side')
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles)
+    }
+  }, [])
+
   return (
-    <MsalProvider instance={pca}>
-      <Provider store={store}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </Provider>
-    </MsalProvider>
+    <ThemeProvider theme={materialTheme}>
+      <MsalProvider instance={pca}>
+        <Provider store={store}>
+          <CssBaseline />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </Provider>
+      </MsalProvider>
+    </ThemeProvider>
   )
 }
 
