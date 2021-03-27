@@ -34,7 +34,7 @@ const Header: React.FC = () => {
   }
 
   return (
-    <AppBar position="fixed" color="primary" className={classes.appBar}>
+    <AppBar position="fixed" className={classes.appBar}>
       <Toolbar>
         <IconButton edge="start" color="inherit">
           <MenuIcon />

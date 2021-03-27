@@ -6,10 +6,17 @@ import { Provider } from 'react-redux'
 import Layout from '../components/Layout'
 import store from '../store/store'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import { blue, pink } from '@material-ui/core/colors'
 import CssBaseline from '@material-ui/core/CssBaseline'
 
 const materialTheme = createMuiTheme({
   palette: {
+    primary: {
+      main: blue[200]
+    },
+    secondary: {
+      main: pink[200]
+    },
     type: 'dark'
   }
 })
