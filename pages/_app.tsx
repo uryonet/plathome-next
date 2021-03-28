@@ -1,5 +1,5 @@
 import { Configuration, PublicClientApplication } from '@azure/msal-browser'
-import { MsalProvider } from '@azure/msal-react'
+import { MsalProvider, AuthenticatedTemplate, UnauthenticatedTemplate } from '@azure/msal-react'
 import { AppProps } from 'next/app'
 import { useEffect } from 'react'
 import { Provider } from 'react-redux'
@@ -42,9 +42,14 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
       <ThemeProvider theme={materialTheme}>
         <Provider store={store}>
           <CssBaseline />
-          <Layout>
+          <AuthenticatedTemplate>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </AuthenticatedTemplate>
+          <UnauthenticatedTemplate>
             <Component {...pageProps} />
-          </Layout>
+          </UnauthenticatedTemplate>
         </Provider>
       </ThemeProvider>
     </MsalProvider>
