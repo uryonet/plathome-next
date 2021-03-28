@@ -1,5 +1,7 @@
-import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react'
 import React from 'react'
+import MainHead from '../components/Head'
+
+import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react'
 import { Button, Box, Container } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -22,6 +24,7 @@ const Home: React.FC = () => {
 
   return (
     <Container className={classes.container}>
+      <MainHead />
       <Box className={classes.flexBox}>
         <h1>Welcome to plathome!</h1>
         <AuthenticatedTemplate>
