@@ -23,7 +23,8 @@ const materialTheme = createMuiTheme({
 
 const configuration: Configuration = {
   auth: {
-    clientId: process.env.NEXT_PUBLIC_REACT_APP_AZURE_APP_ID
+    clientId: process.env.NEXT_PUBLIC_AZURE_APP_ID,
+    authority: 'https://login.microsoftonline.com/' + process.env.NEXT_PUBLIC_AZURE_TENANT_ID
   }
 }
 const pca = new PublicClientApplication(configuration)
@@ -37,16 +38,16 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   }, [])
 
   return (
-    <ThemeProvider theme={materialTheme}>
-      <MsalProvider instance={pca}>
+    <MsalProvider instance={pca}>
+      <ThemeProvider theme={materialTheme}>
         <Provider store={store}>
           <CssBaseline />
           <Layout>
             <Component {...pageProps} />
           </Layout>
         </Provider>
-      </MsalProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </MsalProvider>
   )
 }
 
