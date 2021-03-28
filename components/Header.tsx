@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import DrawerMenu from './DrawerMenu'
 
-import { AppBar, Button, Fab, IconButton, Toolbar } from '@material-ui/core'
+import { AppBar, Fab, IconButton, Toolbar } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import AddIcon from '@material-ui/icons/Add'
 import MoreIcon from '@material-ui/icons/MoreVert'
