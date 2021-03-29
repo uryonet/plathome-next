@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 
+import { useMsal } from '@azure/msal-react'
 import {
   AppBar,
   Container,
@@ -16,7 +17,6 @@ import {
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Home, AssignmentTurnedIn, MenuBook, Menu, Add, MoreVert } from '@material-ui/icons'
-import { useMsal } from '@azure/msal-react'
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -101,6 +101,7 @@ const Header: React.FC = () => {
         open={isShow}
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}
+        disableDiscovery
       >
         {menuList()}
       </SwipeableDrawer>
