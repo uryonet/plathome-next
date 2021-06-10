@@ -1,5 +1,5 @@
 {
-  "name": "plathome",
+  "name": "plathome-next",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,23 +8,23 @@
     "start": "next start"
   },
   "dependencies": {
-    "@azure/msal-browser": "^2.13.0",
-    "@azure/msal-react": "^1.0.0-beta.1",
-    "@material-ui/core": "^4.11.3",
+    "@azure/msal-browser": "^2.14.2",
+    "@azure/msal-react": "^1.0.0",
+    "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
-    "@reduxjs/toolkit": "^1.5.0",
-    "next": "^10.0.8",
+    "@reduxjs/toolkit": "^1.6.0",
+    "next": "^10.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-redux": "^7.2.2",
-    "redux": "^4.0.5"
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0"
   },
   "devDependencies": {
-    "@types/node": "^14.14.37",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
+    "@types/node": "^15.12.2",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.7",
     "@types/react-redux": "^7.1.16",
-    "prettier": "^2.2.1",
-    "typescript": "^4.2.2"
+    "prettier": "^2.3.1",
+    "typescript": "^4.3.2"
   }
 }

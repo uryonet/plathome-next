@@ -1,5 +1,5 @@
 import React from 'react'
-import MainHead from '../components/Head'
+import MainHead from '../components/MainHead'
 
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react'
 import { Button, Box, Container } from '@material-ui/core'
@@ -29,9 +29,6 @@ const Home: React.FC = () => {
         <h1>Welcome to plathome!</h1>
         <AuthenticatedTemplate>
           <p>ログイン済みです。</p>
-          <Button variant="contained" color="secondary" onClick={() => instance.logoutRedirect()}>
-            ログアウト
-          </Button>
         </AuthenticatedTemplate>
         <UnauthenticatedTemplate>
           <p>ログインが必要です。</p>
